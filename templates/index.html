@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-red.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <style>
             body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
             body {font-size:16px;}
@@ -21,13 +22,13 @@
             <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
             <div class="w3-container">
                 <h2 class="w3-padding-64"><b>About . . .</b></h2>
-                <h4>This is a Python RESTful Web Application of different stores and their corresponding items developed using Flask and Flask_RESTful.</h4>
+                <h5>This is a Python RESTful Web Application of different stores and their corresponding items developed using Flask and Flask_RESTful.</h5>
                 <br>
-                <h4>The API conforms to REST standards supporting GET / PUT / POST / DELETE requests.</h4>
+                <h5>The API conforms to REST standards supporting GET / PUT / POST / DELETE requests.</h5>
                 <br>
-                <h4>Store and Item data is stored in an SQLite Database.</h4>
+                <h5>Store and Item data is stored in an SQLite Database.</h5>
                 <br>
-                <h4>User registration / authentication / login implemented using JSON Web Tokens and Flask_JWT.</h4>
+                <h5>User registration / authentication / login implemented using JSON Web Tokens and Flask_JWT.</h5>
             </div>
             <div class="w3-bar-block">
                 <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"></a>
@@ -48,9 +49,9 @@
                 <h1 class="w3-xxxlarge w3-text-red"><b>Application Programming Interface API</b></h1>
                 <hr style="width:50px;border:5px solid red" class="w3-round">
             </div>
-        
+            <div class="container">
             {% for store in stores %}
-            <div class="w3-row-padding w3-padding-16 w3-center">
+            <!-- <div class="w3-row-padding w3-padding-16 w3-center"> -->
             <div class="w3-card-4 w3-quarter">
                 <header class="w3-container w3-red">
                     <h1 class="w3-center">{{ store.name }}</h1>
@@ -71,5 +72,8 @@
             {% endfor %}
         </div>
         </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </body>
 </html>
