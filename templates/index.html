@@ -53,27 +53,28 @@
             <div class="container" style="float: left">
             
             <!-- <div class="w3-row-padding w3-padding-16 w3-center"> -->
-            <div class="w3-card-4 w3-quarter">
-                <header class="w3-container w3-red" style="Overlay">
-                    <h1 class="w3-center">{{ store.name }}</h1>
-                </header>
-                <table class="w3-table w3-striped">
-                    <tr>
-                        <th>Item Name</th>
-                        <th>Price</th>
-                    </tr>
-                    {% for item in store['items'] %}
-                    <tr>
-                        <td>{{ item.name }}</td>
-                        <td>${{ item.price }}</td>
-                    </tr>
-                    {% endfor %}
-                </table>           
+                <div class="w3-card-4 w3-quarter">
+                    <header class="w3-container w3-red" style="Overlay">
+                        <h1 class="w3-center">{{ store.name }}</h1>
+                    </header>
+                    <table class="w3-table w3-striped">
+                        <tr>
+                            <th>Item Name</th>
+                            <th>Price</th>
+                        </tr>
+                        {% for item in store['items'] %}
+                        <tr>
+                            <td>{{ item.name }}</td>
+                            <td>${{ item.price }}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>           
+                </div>
+                <br>
+                <br>
             </div>
-            <br>
-            <br>
             {% endfor %}
-        </div>
+        
         </div>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
