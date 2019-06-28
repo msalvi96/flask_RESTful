@@ -49,11 +49,33 @@
                 <h1 class="w3-xxxlarge w3-text-red"><b>Application Programming Interface API</b></h1>
                 <hr style="width:50px;border:5px solid red" class="w3-round">
             </div>
-            {% for store in stores %}
-            <div class="container" style="float: left">
+
+            <div class="container" style="float: inline-start">
+                {% for store in stores %}
+                <div class="w3-panel w3-red w3-round-xxlarge">
+                    {{ store.name }}
+                </div>
+                <table class="w3-table w3-striped">
+                    <tr>
+                        <th>Item Name</th>
+                        <th>Price</th>
+                    </tr>
+                    {% for item in store['items'] %}
+                    <tr>
+                        <td>{{ item.name }}</td>
+                        <td>${{ item.price }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>           
+                {% endfor %}
+            </div>
+            
+            
+            
+            <!-- <div class="container" style="float: left"> -->
             
             <!-- <div class="w3-row-padding w3-padding-16 w3-center"> -->
-                <div class="w3-card-4 w3-quarter">
+                <!-- <div class="w3-card-4 w3-quarter">
                     <header class="w3-container w3-red" style="Overlay">
                         <h1 class="w3-center">{{ store.name }}</h1>
                     </header>
@@ -73,7 +95,7 @@
                 <br>
                 <br>
             </div>
-            {% endfor %}
+            {% endfor %} -->
         
         </div>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
